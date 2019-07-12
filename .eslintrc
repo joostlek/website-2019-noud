@@ -1,0 +1,119 @@
+{
+  "plugins": [
+    "vue",
+    "import"
+  ],
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "root": true,
+  "globals": {},
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/recommended",
+    "airbnb",
+    "@nuxtjs"
+  ],
+  "rules": {
+    "semi": [
+      2,
+      "never"
+    ],
+    "brace-style": [
+      2,
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "camelcase": 2,
+    "comma-style": [
+      2,
+      "last"
+    ],
+    "curly": 2,
+    "eqeqeq": 2,
+    "func-names": 2,
+    "space-before-function-paren": [
+      "error",
+      "never"
+    ],
+    "guard-for-in": 2,
+    "wrap-iife": 2,
+    "no-undef": 2,
+    "new-cap": 2,
+    "quotes": [
+      2,
+      "single"
+    ],
+    "no-trailing-spaces": 2,
+    "comma-dangle": 0,
+    "max-len": [
+      2,
+      {
+        "code": 90,
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "vue/html-self-closing": ["error", {
+      "html": {
+        "void": "always",
+        "normal": "any",
+        "component": "always"
+      },
+      "svg": "always",
+      "math": "always"
+    }],
+    "vue/no-v-html": 0,
+    "no-underscore-dangle": 0,
+    "strict": 0,
+    "no-shadow": 0,
+    "no-var": 2,
+    "no-useless-rename": 2,
+    "no-new-object": 2,
+    "no-array-constructor": 2,
+    "no-unused-vars": 1,
+    "global-require": 0,
+    "prefer-spread": 1,
+    "prefer-arrow-callback": 2,
+    "prefer-const": 1,
+    "import/prefer-default-export": 0,
+    "no-console": 0,
+    "no-extend-native": 2,
+    "function-paren-newline": [
+      2,
+      "multiline"
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "multiline": true,
+        "minProperties": 3,
+        "consistent": true
+      }
+    ],
+    "import/no-dynamic-require": 2,
+    "no-nested-ternary": 0,
+    "jsx-a11y/mouse-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "no-use-before-define": 0,
+    "vue/attribute-hyphenation": [
+      "error",
+      "never"
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "rules": {
+        "max-len": "off"
+      }
+    }
+  ]
+}
