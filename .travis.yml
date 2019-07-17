@@ -1,7 +1,17 @@
+sudo: required
+
 language: node_js
+
+services:
+  - docker
 
 node_js:
   - "10.8.0"
+
+addons:
+  sonarcloud:
+    organization: "indicium"
+    token: $SONAR_TOKEN
 
 cache:
   npm: true
@@ -11,5 +21,6 @@ install:
   - npm run generate
 
 script:
+  - sonar-scanner
   - echo "Skipping tests"
 
