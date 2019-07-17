@@ -26,3 +26,5 @@ script:
   - sonar-scanner
   - echo "Skipping tests"
 
+after_success:
+  - docker build -t indicium:website .
