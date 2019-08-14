@@ -1,5 +1,5 @@
 <template>
-  <button @click="onClick">
+  <button :class="['btn', size]" @click="onClick">
     <slot></slot>
   </button>
 </template>
@@ -11,33 +11,39 @@ export default {
     onClick: {
       type: Function,
       required: true,
+    },
+    size: {
+      type: String,
+      required: false,
+      default: 'l'
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  button {
-    font-family: Roboto,serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 28px;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.75px;
-    color: #FFFFFF;
+  .btn {
+    font-family: Roboto, sans-serif;
+    color: #fff;
     background: #72c9e0;
-    -webkit-box-shadow: 0 0 32px rgba(181, 187, 201, 0.4);
-    -moz-box-shadow: 0 0 32px rgba(181, 187, 201, 0.4);
     box-shadow: 0 0 32px rgba(181, 187, 201, 0.4);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
     border-radius: 4px;
     border: 0;
-    min-width: 200px;
-    min-height: 60px;
-    padding: 15px;
+
+    &.s {
+      padding: 8px;
+      font-size: .6rem;
+    }
+
+    &.m {
+      padding: 8px 12px;
+      font-size: .8rem;
+    }
+
+    &.l {
+      padding: 12px 16px;
+      font-size: 1rem;
+    }
 
     &:hover {
       -webkit-box-shadow: 0 0 32px rgba(181, 187, 201, 0.8);
