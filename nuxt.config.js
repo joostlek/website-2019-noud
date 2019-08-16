@@ -29,7 +29,8 @@ export default {
     color: '#72c9e0'
   },
   css: [
-    '~/node_modules/normalize.css/normalize.css'
+    '~/node_modules/normalize.css/normalize.css',
+    '@/assets/scss/main.scss'
   ],
   plugins: [],
   modules: [],
