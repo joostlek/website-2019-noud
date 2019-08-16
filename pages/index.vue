@@ -33,10 +33,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #72c9e0;
   font-family: 'Roboto', sans-serif;
 }
 </style>
