@@ -6,7 +6,9 @@
       <h3>Wij zijn de <span class="bold">studie</span>vereniging voor HBO-ICT van Hogeschool Utrecht</h3>
 
       <div class="buttons">
-        <Button size="l">Wordt lid</Button>
+        <Button size="l">
+          Word lid
+        </Button>
         <TextLink>Bekijk agenda</TextLink>
       </div>
     </div>
