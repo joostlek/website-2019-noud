@@ -1,10 +1,35 @@
 <template>
-  <h1>Home</h1>
+  <div>
+    <Nav />
+    <Heading />
+    <Sponsoren />
+    <TextBlock center />
+    <Events />
+    <TextBlock />
+    <TextBlock />
+    <TextBlock inverted />
+    <Footer />
+  </div>
 </template>
 
 <script>
+import Nav from '../components/Nav'
+import Heading from '../components/Heading'
+import Footer from '../components/Footer'
+import Sponsoren from '../components/Sponsoren'
+import TextBlock from '../components/TextBlock'
+import Events from '../components/Events'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    Nav,
+    Heading,
+    Sponsoren,
+    TextBlock,
+    Events,
+    Footer
+  }
 }
 </script>
 
