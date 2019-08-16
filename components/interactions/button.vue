@@ -29,6 +29,7 @@ export default {
     box-shadow: 0 0 32px rgba(181, 187, 201, 0.4);
     border-radius: 4px;
     border: 0;
+    transition: 200ms;
 
     &.s {
       padding: 8px;
@@ -41,7 +42,7 @@ export default {
     }
 
     &.l {
-      padding: 12px 16px;
+      padding: 12px 24px;
       font-size: 1rem;
     }
 
