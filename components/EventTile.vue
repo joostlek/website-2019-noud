@@ -1,11 +1,9 @@
 <template>
-  <div class="main-container">
-    <a class="container">
-      <h5>{{ toDateString }}</h5>
-      <h3>{{ event.title }}</h3>
-      <p>{{ event.description }}</p>
-    </a>
-  </div>
+  <a class="event-tile container" :href="event.url">
+    <h5>{{ toDateString }}</h5>
+    <h4>{{ event.title }}</h4>
+    <p class="small">{{ event.description }}</p>
+  </a>
 </template>
 
 <script>
@@ -51,65 +49,37 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-a {
-  text-decoration: none;
-}
-
-.main-container {
-  display: inline-block;
-}
-
-.container {
-  border-top: 5px solid #72c9e1;
-  width: 300px;
-  height: 175px;
+.event-tile {
+  display: inline-flex;
+  min-width: 300px;
+  flex: 1;
+  flex-direction: column;
+  border-top: 4px solid #72c9e1;
+  flex-direction: wrap;
+  margin: 16px;
   background: #f3f8fa;
-  display: inline-block;
   padding: 10px;
-  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: box-shadow 0.3s;
-  -moz-transition: box-shadow 0.3s;
-  -ms-transition: box-shadow 0.3s;
-  -o-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
+  transition: box-shadow 300ms;
+
   &:hover {
-    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   }
-}
 
-h5 {
-  color: #72c9e0;
-  margin: 0;
-  font-family: 'Roboto Medium', serif;
-  font-size: 18px;
-  font-weight: normal;
-}
+  h5 {
+    color: #72c9e0;
+    margin: 0 0 8px 0;
+  }
 
-h3 {
-  color: #8d8f91;
-  font-family: 'Roboto Medium', serif;
-  font-size: 24px;
-  font-weight: normal;
-  margin-top: 5px;
-  margin-bottom: 0;
-}
+  h4 {
+    color: #8d8f91;
+    margin: 0;
+  }
 
-p {
-  color: #8d8f91;
-  font-family: Calibri, serif;
-  font-size: 18px;
-  font-weight: normal;
-  margin-top: 5px;
-  margin-bottom: 0;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
+  p {
+    color: #8d8f91;
+    margin: 0;
+    text-overflow: ellipsis;
+  }
 }
 </style>
