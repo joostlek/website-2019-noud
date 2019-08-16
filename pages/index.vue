@@ -9,8 +9,9 @@
       text="Wij zijn dé studievereniging voor HBO-ICT van Hogeschool Utrecht. We organiseren het hele jaar door activiteiten zoals bedrijfsbezoeken, kroegcolleges, gastcolleges, lunchlezingen, en nog veel meer over allerlei verschillende onderwerpen. Maar we organiseren natuurlijk ook activiteiten voor gezelligheid! Kom eens langs op onze borrels, LAN-party's of iets anders dat we organiseren!"
     />
     <Events />
-    <TextBlock />
-    <TextBlock />
+    <TextBlock type="left-image" />
+    <TextBlock type="center" />
+    <TextBlock type="right-image" />
     <TextBlock inverted />
     <Footer />
   </div>

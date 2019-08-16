@@ -3,8 +3,18 @@
     <h1>{{ title }}</h1>
     <p>{{ text }}</p>
   </div>
-  <div v-else>
-    give content
+
+  <div v-else-if="type === 'left-image'" :class="['text-block', type]">
+    left image
+  </div>
+
+  <div v-else-if="type === 'right-image'" :class="['text-block', type]">
+    right image
+  </div>
+
+  <div v-else class="text-block">
+    <h1>{{ title }}</h1>
+    <p>{{ text }}</p>
   </div>
 </template>
 
@@ -14,7 +24,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'center'
+      default: ''
     },
     title: {
       type: String,
@@ -37,5 +47,9 @@ export default {
   &.center {
     text-align: center;
   }
+
+  &.right-image {}
+
+  &.left-image {}
 }
 </style>
