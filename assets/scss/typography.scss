@@ -17,7 +17,7 @@ h1 {
 
 h2 {
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 900;
   line-height: 140%;
   font-family: 'Roboto', sans-serif;
   color: #8D8F91;
@@ -33,7 +33,6 @@ h2 {
 
 h3 {
   font-size: 32px;
-  font-weight: 700;
   line-height: 140%;
   color: #8D8F91;
   font-family: 'Roboto', sans-serif;
@@ -108,5 +107,20 @@ a {
     &.small {
       font-size: 14px;
     }
+  }
+}
+
+
+span {
+  &.bold {
+    font-weight: 800;
+  }
+
+  &.medium {
+    font-weight: 500;
+  }
+
+  &.light {
+    font-weight: 200;
   }
 }
