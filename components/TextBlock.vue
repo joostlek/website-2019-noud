@@ -32,6 +32,7 @@ export default {
 .text-block {
   max-width: 829px;
   margin: 0 auto;
+  padding: 96px 0;
 
   &.center {
     text-align: center;
