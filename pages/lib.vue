@@ -1,10 +1,21 @@
 <template>
   <div class="container">
-    <Button size="l">Button tekst</Button>
-    <Button>Button tekst</Button>
-    <Button size="s">Button tekst</Button>
-    <br /><br/>
-
+    <Button size="l" :onClick="test">
+      Button tekst
+    </Button>
+    <Button :onClick="test">
+      Button tekst
+    </Button>
+    <Button size="s" :onClick="test">
+      Button tekst
+    </Button>
+    <br /><br />
+    <TextLink :callback="test">
+      Bekijk agenda
+    </TextLink>
+    <br />
+    <br />
+    <br />
     <EventTile v-for="(event, idx) in events" :key="idx" :event="event" />
     <h1>h1 - header</h1>
     <h2>h2 - header</h2>
@@ -20,9 +31,15 @@
 <script>
 import Button from '../components/interactions/button'
 import EventTile from '../components/EventTile'
+import TextLink from '../components/interactions/TextLink'
 
 export default {
   name: 'Lib',
+  components: {
+    Button,
+    EventTile,
+    TextLink
+  },
   data: () => ({
     events: [
       {
@@ -47,6 +64,11 @@ export default {
         course: 'TI'
       }
     ]
-  })
+  }),
+  methods: {
+    test() {
+      console.log('test')
+    }
+  }
 }
 </script>

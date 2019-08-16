@@ -6,8 +6,12 @@
       <h3>Wij zijn de <span class="bold">studie</span>vereniging voor HBO-ICT van Hogeschool Utrecht</h3>
 
       <div class="buttons">
-        <Button size="l">Wordt lid</Button>
-        <TextLink>Bekijk agenda</TextLink>
+        <Button size="l">
+          Word lid
+        </Button>
+        <TextLink :callback="navigateToCalendar">
+          Bekijk agenda
+        </TextLink>
       </div>
     </div>
   </div>
@@ -22,6 +26,12 @@ export default {
   components: {
     Button,
     TextLink
+  },
+  methods: {
+    navigateToCalendar() {
+      // eslint-disable-next-line no-restricted-globals
+      setTimeout(() => { location.href = '#events' }, 1)
+    }
   }
 }
 </script>
