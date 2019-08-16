@@ -1,5 +1,5 @@
 <template>
-  <div class="events-container">
+  <div class="events-container" id="events">
     <h2 class="center">Opkomende activiteiten</h2>
 
     <div class="events">

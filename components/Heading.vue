@@ -9,7 +9,9 @@
         <Button size="l">
           Word lid
         </Button>
-        <TextLink>Bekijk agenda</TextLink>
+        <TextLink :callback="navigateToCalendar">
+          Bekijk agenda
+        </TextLink>
       </div>
     </div>
   </div>
@@ -24,6 +26,12 @@ export default {
   components: {
     Button,
     TextLink
+  },
+  methods: {
+    navigateToCalendar() {
+      // eslint-disable-next-line no-restricted-globals
+      setTimeout(() => { location.href = '#events' }, 1)
+    }
   }
 }
 </script>
