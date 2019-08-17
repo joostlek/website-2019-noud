@@ -28,7 +28,10 @@ export default {
   loading: {
     color: '#72c9e0'
   },
-  css: [],
+  css: [
+    '~/node_modules/normalize.css/normalize.css',
+    '@/assets/scss/main.scss'
+  ],
   plugins: [],
   modules: [],
   build: {
