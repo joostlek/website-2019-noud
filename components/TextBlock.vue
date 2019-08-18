@@ -5,11 +5,23 @@
   </div>
 
   <div v-else-if="type === 'left-image'" :class="['text-block', type]">
-    left image
+    <div class="left">
+      <img src="https://via.placeholder.com/348x408/f2" alt="sponsor logo title" />
+    </div>
+    <div class="right">
+      <h1>{{ title }}</h1>
+      <p>{{ text }}</p>
+    </div>
   </div>
 
   <div v-else-if="type === 'right-image'" :class="['text-block', type]">
-    right image
+    <div class="left">
+      <h1>{{ title }}</h1>
+      <p>{{ text }}</p>
+    </div>
+    <div class="right">
+      <img src="https://via.placeholder.com/348x408/f2" alt="sponsor logo title" />
+    </div>
   </div>
 
   <div v-else class="text-block">
@@ -48,8 +60,21 @@ export default {
     text-align: center;
   }
 
-  &.right-image {}
+  &.left-image, &.right-image {
+    display: flex;
+    img {
+      padding: 32px;
+      width: auto;
+      height: 100%;
+    }
 
-  &.left-image {}
+    .left {
+      flex: 1;
+    }
+
+    .right {
+      flex: 1;
+    }
+  }
 }
 </style>
