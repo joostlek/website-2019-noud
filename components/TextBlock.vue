@@ -6,7 +6,7 @@
 
   <div v-else-if="type === 'left-image'" :class="['text-block', type]">
     <div class="left">
-      <img src="https://via.placeholder.com/348x408/f2" alt="sponsor logo title" />
+      <img :src="image" alt="sponsor logo title" />
     </div>
     <div class="right">
       <h1>{{ title }}</h1>
@@ -20,7 +20,7 @@
       <p>{{ text }}</p>
     </div>
     <div class="right">
-      <img src="https://via.placeholder.com/348x408/f2" alt="sponsor logo title" />
+      <img :src="image" alt="sponsor logo title" />
     </div>
   </div>
 
@@ -45,6 +45,10 @@ export default {
     text: {
       type: String,
       default: 'text'
+    },
+    image: {
+      type: String,
+      default: 'https://via.placeholder.com/348x408/f2'
     }
   }
 }
