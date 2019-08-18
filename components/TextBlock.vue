@@ -8,10 +8,10 @@
   </div>
 
   <div v-else-if="type === 'left-image'" :class="['text-block', type]">
-    <div class="left">
+    <div class="image">
       <img :src="image" alt="sponsor logo title" />
     </div>
-    <div class="right">
+    <div class="text">
       <h1>{{ title }}</h1>
       <p>{{ text }}</p>
       <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l">
@@ -21,14 +21,14 @@
   </div>
 
   <div v-else-if="type === 'right-image'" :class="['text-block', type]">
-    <div class="left">
+    <div class="text">
       <h1>{{ title }}</h1>
       <p>{{ text }}</p>
       <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l">
         {{ readMoreButtonText }}
       </Button>
     </div>
-    <div class="right">
+    <div class="image">
       <img :src="image" alt="sponsor logo title" />
     </div>
   </div>
@@ -87,23 +87,35 @@ export default {
 
   &.center {
     text-align: center;
+    @media screen and (max-width: 414px) {
+      margin: 0 16px;
+    }
   }
 
   &.left-image, &.right-image {
     display: flex;
-    img {
-      padding: 32px;
-      width: 100%;
-      height: auto;
+    flex-wrap: wrap;
+    .image {
+      flex-grow: 1;
+      flex-basis: calc(50% - 32px);
+      padding: 0 16px;
+      min-width: 348px;
+      @media screen and (min-width: 414px) {
+        margin-top: 32px;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
     }
-
-    .left {
-      flex: 1;
+    .text {
+      flex-grow: 1;
+      flex-basis: calc(50% - 32px);
+      padding: 0 16px;
     }
-
-    .right {
-      flex: 1;
-    }
+  }
+  &.right-image Button {
+    margin-bottom: 8px;
   }
   Button {
     margin-left: auto;
