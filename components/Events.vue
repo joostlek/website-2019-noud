@@ -105,6 +105,7 @@ export default {
   .categories {
     ul {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
 
       li {
@@ -118,6 +119,13 @@ export default {
           height: 24px;
           background-color: #f2f2f2;
           margin-right: 8px;
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+          transition: box-shadow 300ms;
+
+          &:hover {
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+          }
+
         }
       }
     }
