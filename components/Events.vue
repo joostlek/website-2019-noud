@@ -1,6 +1,8 @@
 <template>
-  <div class="events-container" id="events">
-    <h2 class="center">Opkomende activiteiten</h2>
+  <div id="events" class="events-container">
+    <h2 class="center">
+      Opkomende activiteiten
+    </h2>
 
     <div class="categories">
       <ul>
