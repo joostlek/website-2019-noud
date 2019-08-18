@@ -50,6 +50,7 @@ export default {
     max-width: 1184px;
     margin: 0 auto;
     justify-content: space-between;
+    overflow: auto;
 
     li {
       a {

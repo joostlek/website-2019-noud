@@ -24,6 +24,7 @@ export default {
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
+    overflow: auto;
     justify-content: space-between;
   }
 }
