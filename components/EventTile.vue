@@ -69,7 +69,6 @@ export default {
   min-width: 300px;
   flex: 1;
   flex-direction: column;
-  flex-direction: wrap;
   margin: 16px;
   background: #f3f8fa;
   padding: 16px;
