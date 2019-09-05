@@ -2,7 +2,7 @@
   <div v-if="type === 'center'" :class="['text-block', type]">
     <h1>{{ title }}</h1>
     <p>{{ text }}</p>
-    <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l">
+    <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l" :center="type === 'center'">
       {{ readMoreButtonText }}
     </Button>
   </div>
@@ -118,8 +118,6 @@ export default {
     margin-bottom: 8px;
   }
   Button {
-    margin-left: auto;
-    margin-right: auto;
     display: inherit;
   }
 }

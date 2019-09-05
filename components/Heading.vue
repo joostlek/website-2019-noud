@@ -3,7 +3,7 @@
     <div class="heading-content">
       <img src="/logo/indicium-logo-top.svg" alt="Indicium Logo" />
 
-      <h3>Wij zijn de <span class="bold">studie</span>vereniging voor HBO-ICT van Hogeschool Utrecht</h3>
+      <h1>Wij zijn de <span class="bold">studie</span>vereniging voor HBO-ICT van Hogeschool Utrecht</h1>
 
       <div class="buttons">
         <Button size="l" :onClick="signUp">
@@ -51,8 +51,8 @@ export default {
     flex-direction: column;
     align-items: center;
 
-    h3 {
-      max-width: 632px;
+    h1 {
+      max-width: 832px;
     }
 
     .buttons {
