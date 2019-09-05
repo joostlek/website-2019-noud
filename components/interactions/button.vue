@@ -1,5 +1,5 @@
 <template>
-  <button :class="['btn', size]" @click="onClick">
+  <button :class="['btn', size, center ? 'center' : '']" @click="onClick">
     <slot></slot>
   </button>
 </template>
@@ -16,7 +16,14 @@ export default {
       type: String,
       required: false,
       default: 'm'
+    },
+    center: {
+      type: Boolean,
+      default: false
     }
+  },
+  mounted() {
+    console.log('button mounted is center?', this.center)
   }
 }
 </script>
@@ -44,6 +51,11 @@ export default {
     &.l {
       padding: 12px 24px;
       font-size: 1rem;
+    }
+
+    &.center {
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &:hover {
