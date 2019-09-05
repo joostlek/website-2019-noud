@@ -72,11 +72,11 @@ export default {
   margin: 16px;
   background: #f3f8fa;
   padding: 16px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px 0 rgba(124, 124, 124, 0.1);
   transition: box-shadow 300ms;
 
   &:hover {
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 0 rgba(124, 124, 124, 0.3);
   }
 
   .color-container {

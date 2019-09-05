@@ -9,13 +9,13 @@
       text="Wij zijn dé studievereniging voor HBO-ICT van Hogeschool Utrecht. We organiseren het hele jaar door activiteiten zoals bedrijfsbezoeken, kroegcolleges, gastcolleges, lunchlezingen, en nog veel meer over allerlei verschillende onderwerpen. Maar we organiseren natuurlijk ook activiteiten voor gezelligheid! Kom eens langs op onze borrels, LAN-party's of iets anders dat we organiseren!"
     />
     <Events />
-    <TextBlock
+    <!-- <TextBlock
       type="left-image"
       title="Introkamp"
       text="Sta je op het punt om HBO-ICT te gaan studeren? Dan is ons introkamp de ideale start vóór jouw studie! Ontmoet in vier dagen gelijk al je medestudenten door Utrecht te verkennen, kennis te maken met verschillende partners en een leuk programma georganiseerd door onze introcommissie. Het introkamp voor collegejaar 2019-2020 is van 24 augustus t/m 27 augustus. "
       image="https://indicium.hu/thumbs/800x800r/introkamp/intro-home.png"
       readMoreButtonText="Meld je nu aan!"
-    />
+    /> -->
     <TextBlock
       type="center"
       title="Lid worden is meedoen!"
@@ -29,7 +29,6 @@
       image="https://indicium.hu/thumbs/800x800r/2019-03/dsc-5016.jpg"
       readMoreButtonText="Lees meer"
     />
-    <TextBlock inverted />
     <Footer />
   </div>
 </template>
