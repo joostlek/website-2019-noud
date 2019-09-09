@@ -23,6 +23,12 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicons/favicon.ico'
+    }, {
+      rel: 'stylesheet',
+      href: 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.css'
+    }, {
+      rel: 'stylesheet',
+      href: 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.css'
     }]
   },
   loading: {
@@ -32,7 +38,9 @@ export default {
     '~/node_modules/normalize.css/normalize.css',
     '@/assets/scss/main.scss'
   ],
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/full-calendar', ssr: false }
+  ],
   modules: [],
   build: {
     extend(config, ctx) {
