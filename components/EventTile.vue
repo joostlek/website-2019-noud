@@ -19,7 +19,10 @@ export default {
     },
     allCategories: {
       type: Array,
-      required: true
+      required: true,
+      default() {
+        return []
+      }
     }
   },
   computed: {
