@@ -18,7 +18,7 @@
   "rules": {
     "singleline-html-element-content-newline": 0,
     "semi": [
-      2,
+      1,
       "never"
     ],
     "brace-style": [

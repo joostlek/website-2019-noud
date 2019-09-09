@@ -6,6 +6,8 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--text-color);
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 ul {

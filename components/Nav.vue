@@ -47,7 +47,7 @@ export default {
   ul {
     list-style: none;
     display: flex;
-    max-width: 1184px;
+    max-width: 984px;
     margin: 0 auto;
     justify-content: space-between;
     overflow: auto;
@@ -56,7 +56,7 @@ export default {
       a {
         display: block;
         padding: 24px;
-        font-size: 24px;
+        font-size: 16px;
         font-weight: 500;
         color: #8D8F91;
         text-align: center;

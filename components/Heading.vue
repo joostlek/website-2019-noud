@@ -1,5 +1,10 @@
 <template>
   <div class="heading">
+    <AnimatedLine :top="0" right="-10px" :interval="3000" />
+    <AnimatedLine right="75px" :bottom="0" :interval="5000" :rotate="90"/>
+    <AnimatedLine right="115px" :bottom="0" :interval="6000" :rotate="90"/>
+    <AnimatedLine :left="0" top="50px" :interval="8000" :rotate="180"/>
+
     <div class="heading-content">
       <img src="/logo/indicium-logo-top.svg" alt="Indicium Logo" />
 
@@ -20,12 +25,14 @@
 <script>
 import Button from '../components/interactions/button'
 import TextLink from '../components/interactions/TextLink'
+import AnimatedLine from '../components/AnimatedLine'
 
 export default {
   name: 'Heading',
   components: {
     Button,
-    TextLink
+    TextLink,
+    AnimatedLine
   },
   methods: {
     navigateToCalendar() {
@@ -44,6 +51,7 @@ export default {
   display: flex;
   justify-content: center;
   padding: 128px 0 192px;
+  position: relative;
 
   &-content {
     text-align: center;

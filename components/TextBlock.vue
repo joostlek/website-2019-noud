@@ -81,7 +81,7 @@ export default {
 
 <style lang="scss">
 .text-block {
-  max-width: 829px;
+  max-width: 928px;
   margin: 0 auto;
   padding: 96px 0;
 
@@ -95,6 +95,8 @@ export default {
   &.left-image, &.right-image {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+
     .image {
       flex-grow: 1;
       flex-basis: calc(50% - 32px);
