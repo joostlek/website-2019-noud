@@ -12,7 +12,7 @@ export default {
   name: 'TextLink',
   props: {
     url: {
-      type: Function,
+      type: String,
       required: true
     }
   }

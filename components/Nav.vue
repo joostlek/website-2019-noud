@@ -10,7 +10,7 @@
       <ul :style="{ margin: isHome ? '0 auto' : '0'}">
         <li v-for="item in items" :key="item.title + item.url">
           <a v-if="item.url.startsWith('http')" :href="item.url">{{ item.title }}</a>
-          <n-link v-els :to="item.url" prefetch>{{ item.title }}</n-link>
+          <n-link v-else :to="item.url" prefetch>{{ item.title }}</n-link>
         </li>
       </ul>
     </div>

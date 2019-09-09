@@ -1,3 +1,8 @@
+/* eslint-disable */
+import axios from 'axios'
+import content from './content.json'
+console.log(JSON.stringify(content.pages, null, 2))
+
 export default {
   mode: 'universal',
   server: {
@@ -42,6 +47,20 @@ export default {
     { src: '~/plugins/full-calendar', ssr: false }
   ],
   modules: [],
+  generate: {
+    interval: 100,
+    routes: () => {
+      return axios.get('http://localhost:3000/content.json') // not working :(
+        .then(res => {
+          return res.data.pages.map(page => {
+            return {
+              route: page.slug,
+              payload: page
+            }
+          })
+        })
+    }
+  },
   build: {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
