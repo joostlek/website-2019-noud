@@ -1,7 +1,9 @@
 <template>
   <div class="activiteiten">
-    <h1>activiteiten</h1>
-    <full-calendar />
+    <div class="container">
+      <h1>Activiteiten</h1>
+      <full-calendar />
+    </div>
   </div>
 </template>
 
@@ -17,5 +19,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .activiteiten {}
+.activiteiten {
+  padding: 0 0 64px 0;
+}
 </style>
