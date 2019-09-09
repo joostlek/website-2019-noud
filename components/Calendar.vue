@@ -1,6 +1,6 @@
 <template>
   <FullCalendar v-if="events.length > 0" defaultView="dayGridMonth" :plugins="calendarPlugins" :events="events" />
-  <Loading v-else/>
+  <Loading v-else />
 </template>
 
 <script>

@@ -10,7 +10,9 @@
       <ul :style="{ margin: isHome ? '0 auto' : '0'}">
         <li v-for="item in items" :key="item.title + item.url">
           <a v-if="item.url.startsWith('http')" :href="item.url">{{ item.title }}</a>
-          <n-link v-else :to="item.url" prefetch>{{ item.title }}</n-link>
+          <n-link v-else :to="item.url" prefetch>
+            {{ item.title }}
+          </n-link>
         </li>
       </ul>
     </div>
@@ -20,11 +22,6 @@
 <script>
 export default {
   name: 'Nav',
-  computed: {
-    isHome() {
-      return this.$route.path === '/'
-    }
-  },
   data: () => ({
     items: [{
       title: 'Contact',
@@ -46,7 +43,12 @@ export default {
       title: 'Lid worden',
       url: '#'
     }]
-  })
+  }),
+  computed: {
+    isHome() {
+      return this.$route.path === '/'
+    }
+  }
 }
 </script>
 

@@ -1,9 +1,9 @@
 <template>
-<div class="loading">
-  <div class="circle"></div>
-  <div class="circle two"></div>
-  <div class="circle three"></div>
-</div>
+  <div class="loading">
+    <div class="circle"></div>
+    <div class="circle two"></div>
+    <div class="circle three"></div>
+  </div>
 </template>
 
 <style lang="scss" scoped>

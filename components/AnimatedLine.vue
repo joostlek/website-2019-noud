@@ -46,6 +46,13 @@ export default {
     isTracing: false,
     isPulsing: false
   }),
+  mounted() {
+    console.log('toggle animated line')
+    this.tracingInterval = setInterval(this.toggleTrace, this.interval)
+  },
+  destroyed() {
+    clearInterval(this.tracingInterval)
+  },
   methods: {
     toggleTrace() {
       const PULSE_TIME = 450
@@ -59,13 +66,6 @@ export default {
         this.$set(this, 'isPulsing', false)
       }, PULSE_TIME * 4)
     }
-  },
-  mounted() {
-    console.log('toggle animated line')
-    this.tracingInterval = setInterval(this.toggleTrace, this.interval)
-  },
-  destroyed() {
-    clearInterval(this.tracingInterval)
   }
 }
 </script>

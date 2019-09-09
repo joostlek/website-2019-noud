@@ -1,9 +1,9 @@
 <template>
   <div class="heading">
     <AnimatedLine :top="0" right="-10px" :interval="2000" />
-    <AnimatedLine right="75px" :bottom="0" :interval="4000" :rotate="90"/>
-    <AnimatedLine right="115px" :bottom="0" :interval="6000" :rotate="90"/>
-    <AnimatedLine :left="0" top="50px" :interval="8000" :rotate="180"/>
+    <AnimatedLine right="75px" :bottom="0" :interval="4000" :rotate="90" />
+    <AnimatedLine right="115px" :bottom="0" :interval="6000" :rotate="90" />
+    <AnimatedLine :left="0" top="50px" :interval="8000" :rotate="180" />
 
     <div class="heading-content">
       <img src="/logo/indicium-logo-top.svg" alt="Indicium Logo" />
