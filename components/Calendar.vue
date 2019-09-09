@@ -1,5 +1,6 @@
 <template>
-  <FullCalendar defaultView="dayGridMonth" :plugins="calendarPlugins" :events="events" />
+  <FullCalendar v-if="events.length > 0" defaultView="dayGridMonth" :plugins="calendarPlugins" :events="events" />
+  <Loading v-else/>
 </template>
 
 <script>
@@ -7,9 +8,12 @@ import FullCalendar from '@fullcalendar/vue'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import axios from 'axios'
 
+import Loading from './Loading'
+
 export default {
   components: {
-    FullCalendar
+    FullCalendar,
+    Loading
   },
   data: () => ({
     calendarPlugins: [dayGridPlugin],
@@ -18,7 +22,8 @@ export default {
   mounted() {
     axios.get('https://indicium.hu/json/events?&filter[start]<2019-10-13&filter[end]=>2019-09-01&page[size]=1000')
       .then((response) => {
-        this.mapFetchedEvents(response.data.data)
+        const events = response.data.data
+        this.mapFetchedEvents(events)
       })
   },
   methods: {
