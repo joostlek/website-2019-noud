@@ -25,14 +25,14 @@
           transform="translate(-742 -146)"
         />
         <polyline
-          :class="['to-trace', isTracing ? 'trace' : '']"
+          :class="['to-trace', { 'trace': isTracing }]"
           fill="none"
           stroke="#97CFC7"
           stroke-width="4"
           points="1112 148 977.937 148 877.937 248 752 248"
           transform="translate(-742 -146)"
         />
-        <circle :class="['to-pulse', isPulsing ? 'pulse' : '']" cx="12" cy="101" r="12" fill="#97CFC7" />
+        <circle :class="['to-pulse', { 'pulse': 'isPulsing' }]" cx="12" cy="101" r="12" fill="#97CFC7" />
       </g>
     </svg>
   </div>
